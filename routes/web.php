@@ -25,8 +25,8 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::group(['middleware' => 'PreventBackHistory'], function () {
-});
+// Route::group(['middleware' => 'PreventBackHistory'], function () {
+// });
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -34,6 +34,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
 Route::post('/submit-form', [AppointmentController::class, 'store']);
+
 
 
 // Optimize

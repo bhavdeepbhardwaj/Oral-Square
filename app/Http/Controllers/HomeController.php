@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,7 +29,9 @@ class HomeController extends Controller
 
     public function adminHome()
     {
-        return view('adminHome');
+        $appointment = Appointment::where('IsDeleted', '0')->orderBy('created_at', 'DESC')->paginate(5);
+        // dd($appointment);
+        return view('adminHome', ['appointment' => $appointment]);
     }
 
 

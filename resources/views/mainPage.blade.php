@@ -2,6 +2,11 @@
 
 @section('css')
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <style>
+        .height-200 {
+            height: 200px;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -9,10 +14,12 @@
     <div class="site-blocks-cover" style="background-image: url(assets/images/hero_bg_1.jpg);" data-aos="fade"
         data-stellar-background-ratio="0.5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="height-200"></div>
                     <span class="sub-text">We Priority Your</span>
                     <h1>Your <strong>New Smile</strong></h1>
+                    <a href="#Book" class="btn btn-primary text-capitalize">Book Your APPOINTMENT</a>
                 </div>
             </div>
         </div>
@@ -114,7 +121,7 @@
         </div>
     </div>
 
-    <div class="site-section site-block-appointment">
+    <div class="site-section site-block-appointment" id="Book">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-5 pl-lg-5 order-1 order-lg-2">
